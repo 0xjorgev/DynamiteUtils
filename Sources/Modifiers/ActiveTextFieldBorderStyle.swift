@@ -20,4 +20,9 @@ public struct ActiveTextFieldBorderStyle: TextFieldStyle {
                 .stroke((active ? colors.first : colors.last) ?? .clear, lineWidth:active ? 3 : 1)
         )
     }
+    
+    public init(active: Bool, colors: [Color]) {
+        self.active = active
+        self.colors = colors
+    }
 }
